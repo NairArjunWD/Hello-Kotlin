@@ -34,6 +34,21 @@ fun eagerExample() {
     val eager = decorations.filter { it[0] == 'p' }
     println(eager)
 
+//    apply filter lazily
+    val filtered = decorations.asSequence().filter { it[0] == 'p' }
+    println(filtered)
+    println(filtered.toList())
+
+//    apply map lazily
+//    val lazyMap = decorations.asSequence().map { it:String
+//        println("map: $it")
+//        ^map it
+//    }
+//
+//    println(lazyMap)
+//    println("first: ${lazyMap.first()}")
+//    println("all: ${lazyMap.toList()}")
+
 }
 
 fun  getDirtySensorReading() = 20
