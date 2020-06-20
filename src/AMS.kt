@@ -24,6 +24,15 @@ fun main(args: Array<String>) {
     println("Current Date and Time is: $current")
     println("Current Hour is: $hours")
     println("$greetings")
+    eagerExample()
+
+}
+
+fun eagerExample() {
+    val decorations = listOf("rock", "pagoda", "plastic plant", "alligator", "flower pot")
+
+    val eager = decorations.filter { it[0] == 'p' }
+    println(eager)
 
 }
 
